@@ -1,0 +1,25 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    font-size: 48px;
+    margin-top: 50px;
+}
+
+p {
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+#cookie {
+    width: 200px;
+    margin-top: 50px;
+    cursor: pointer;
+}
+
+#points {
+    font-size: 36px;
+    margin-top: 50px;
+}
