@@ -1,8 +1,6 @@
-var points = 0;
-var cookie = document.getElementById("cookie");
-var pointsDisplay = document.getElementById("points");
+let score = 0;
 
-cookie.addEventListener("click", function() {
-    points++;
-    pointsDisplay.innerHTML = points + " points";
+document.getElementById('ducky').addEventListener('click', () => {
+    score++;
+    document.getElementById('score').textContent = `Score: ${score}`;
 });
