@@ -17,3 +17,9 @@ body {
     margin-top: 20px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+#ducky {
+    transition: transform 0.2s;
+}
+#ducky:active {
+    transform: scale(0.9);
+}
