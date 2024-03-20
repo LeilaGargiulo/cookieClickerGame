@@ -22,6 +22,7 @@ function buyUpgrade() {
             score += 10;
             document.getElementById('score').textContent = `Score: ${score}`;
         }, 1000);
+        document.getElementById('upgradeCost').textContent = `Upgrade Cost: Bought`;
     }
 }
 
@@ -34,6 +35,7 @@ function buyCursorUpgrade() {
             score += clickValue;
             document.getElementById('score').textContent = `Score: ${score}`;
         }, 1000);
+        document.getElementById('cursorUpgradeCost').textContent = `Cursor Upgrade Cost: ${cursorUpgradeCost}`;
     }
 }
 
@@ -42,5 +44,8 @@ function buyClickUpgrade() {
         score -= clickUpgradeCost;
         clickValue *= 2;
         clickUpgradeCost *= 5;
+        document.getElementById('clickUpgradeCost').textContent = `Click Upgrade Cost: ${clickUpgradeCost}`;
     }
 }
+
+
