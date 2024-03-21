@@ -7,22 +7,29 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Rubber Ducky Clicker</h1>
-    <img id="ducky" src="https://tse3.mm.bing.net/th/id/OIG.2rCKK6BZXHFBM0pCwEYU?pid=ImgGn" alt="Rubber Ducky"/>
-    <p id="score">Score: 0</p>
-    <p id="upgradeCost">Upgrade Cost: 1000000</p>
-    <button onclick="buyUpgrade()" id="upgradeButton">Update Ducky</button>
-    <p id="cursorUpgradeCost">Cursor Upgrade Cost: 500</p>
-    <button onclick="buyCursorUpgrade()" id="cursorUpgradeButton">Buy Cursor Upgrade</button>
-    <p id="clickUpgradeCost">Click Upgrade Cost: 500</p>
-    <button onclick="buyClickUpgrade()" id="clickUpgradeButton">Buy Click Upgrade</button>
-    <button onclick="showLeaderboard()" id="leaderboardButton">Show Leaderboard</button>
-    <div id="leaderboard" style="display: none;">
-        <input type="text" id="search" placeholder="Search for user">
-        <button onclick="searchUser()">Search</button>
-        <ul id="leaderboardList"></ul>
+    <div id="welcomePage">
+        <h1>Welcome to Rubber Ducky Clicker!</h1>
+        <input type="text" id="username" placeholder="Enter your name">
+        <button onclick="startGame()">Start Game</button>
+    </div>
+    <div id="gamePage" style="display: none;">
+        <h1>Rubber Ducky Clicker</h1>
+        <p id="greeting"></p>
+        <img id="ducky" src="https://tse3.mm.bing.net/th/id/OIG.2rCKK6BZXHFBM0pCwEYU?pid=ImgGn" alt="Rubber Ducky"/>
+        <p id="score">Score: 0</p>
+        <p id="upgradeCost">Upgrade Cost: 1000000</p>
+        <button onclick="buyUpgrade()" id="upgradeButton">Update Ducky</button>
+        <p id="cursorUpgradeCost">Cursor Upgrade Cost: 500</p>
+        <button onclick="buyCursorUpgrade()" id="cursorUpgradeButton">Buy Cursor Upgrade</button>
+        <p id="clickUpgradeCost">Click Upgrade Cost: 500</p>
+        <button onclick="buyClickUpgrade()" id="clickUpgradeButton">Buy Click Upgrade</button>
+        <button onclick="showLeaderboard()" id="leaderboardButton">Show Leaderboard</button>
+        <div id="leaderboard" style="display: none;">
+            <input type="text" id="search" placeholder="Search for user">
+            <button onclick="searchUser()">Search</button>
+            <ul id="leaderboardList"></ul>
+        </div>
     </div>
     <script src="main.js"></script>
 </body>
 </html>
-

@@ -6,6 +6,16 @@ let cursorUpgradeCost = 500;
 let clickUpgradeCost = 500;
 let leaderboard = [];
 
+function startGame() {
+    let username = document.getElementById('username').value;
+    if (username) {
+        document.getElementById('welcomePage').style.display = "none";
+        document.getElementById('gamePage').style.display = "block";
+        document.getElementById('greeting').textContent = `Welcome, ${username}!`;
+        leaderboard.push({name: username, score: 0});
+    }
+}
+
 document.getElementById("ducky").addEventListener('click', () => {
     if (upgradeBought) {
         score += 10;
@@ -13,6 +23,10 @@ document.getElementById("ducky").addEventListener('click', () => {
         score += clickValue;
     }
     document.getElementById('score').textContent = `Score: ${score}`;
+    let user = leaderboard.find(user => user.name === document.getElementById('username').value);
+    if (user) {
+        user.score = score;
+    }
 });
 
 function buyUpgrade() {
@@ -56,6 +70,13 @@ function showLeaderboard() {
     } else {
         leaderboardDiv.style.display = "none";
     }
+    let leaderboardList = document.getElementById('leaderboardList');
+    leaderboardList.innerHTML = '';
+    leaderboard.forEach(user => {
+        let li = document.createElement('li');
+        li.textContent = `User: ${user.name}, Score: ${user.score}`;
+        leaderboardList.appendChild(li);
+    });
 }
 
 function searchUser() {
