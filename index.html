@@ -16,6 +16,13 @@
     <button onclick="buyCursorUpgrade()" id="cursorUpgradeButton">Buy Cursor Upgrade</button>
     <p id="clickUpgradeCost">Click Upgrade Cost: 500</p>
     <button onclick="buyClickUpgrade()" id="clickUpgradeButton">Buy Click Upgrade</button>
+    <button onclick="showLeaderboard()" id="leaderboardButton">Show Leaderboard</button>
+    <div id="leaderboard" style="display: none;">
+        <input type="text" id="search" placeholder="Search for user">
+        <button onclick="searchUser()">Search</button>
+        <ul id="leaderboardList"></ul>
+    </div>
     <script src="main.js"></script>
 </body>
 </html>
+

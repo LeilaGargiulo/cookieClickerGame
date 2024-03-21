@@ -4,6 +4,7 @@ let clickValue = 1;
 let cursorCount = 0;
 let cursorUpgradeCost = 500;
 let clickUpgradeCost = 500;
+let leaderboard = [];
 
 document.getElementById("ducky").addEventListener('click', () => {
     if (upgradeBought) {
@@ -48,4 +49,21 @@ function buyClickUpgrade() {
     }
 }
 
+function showLeaderboard() {
+    let leaderboardDiv = document.getElementById('leaderboard');
+    if (leaderboardDiv.style.display === "none") {
+        leaderboardDiv.style.display = "block";
+    } else {
+        leaderboardDiv.style.display = "none";
+    }
+}
 
+function searchUser() {
+    let username = document.getElementById('search').value;
+    let userScore = leaderboard.find(user => user.name === username);
+    if (userScore) {
+        alert(`User: ${userScore.name}, Score: ${userScore.score}`);
+    } else {
+        alert('User not found');
+    }
+}
